@@ -11,7 +11,7 @@ var initialized = false;
 module.exports.init = function(done) {
     if (!initialized) {
         initialized = true;
-        mongoose.connect('mongodb://localhost/test');
+        mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true });
         //mongoose.set('debug', true);
 
         var companySchema = new mongoose.Schema({
@@ -80,4 +80,3 @@ module.exports.init = function(done) {
         }
     }
 };
-
