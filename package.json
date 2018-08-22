@@ -6,7 +6,8 @@
   "bugs": "https://github.com/strewhella/mongoose-autorefs/issues",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --exit -R spec ./test/test.js"
+    "test": "mocha --exit -R spec ./test/test.js",
+    "test-debug": "nodemon -x \"mocha --inspect --exit -R spec ./test/test.js\""
   },
   "keywords": [
     "mongoose",
@@ -23,7 +24,9 @@
   "license": "MIT",
   "dependencies": {
     "mongoose": "^5.2.6",
-    "mongoose-populator": "^1.0.4"
+    "mongoose-populator": "^1.0.4",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3"
   },
   "devDependencies": {
     "should": "^4.3.1"
